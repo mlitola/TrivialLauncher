@@ -1,10 +1,10 @@
 # TrivialLauncher
-Web based program launcher consisting of Vue.js frontend and Golang backend
+A Web based program launcher consisting of Vue.js frontend and Go backend
 
 ## Description
 Trivial Launcher is as the name implies a trivial software launcher. It consists of a frontend and a backend parts and it can be used as 
 a web based remote control for launching/stopping programs. I made this for my personal use, which will be launching 
-games/emulators/programs/etc. remotely in my living room pc. 
+games/emulators/programs/etc. remotely in my livingroom pc. 
 
 ## Frontend
 ```
@@ -15,7 +15,7 @@ TBA
 
 ### Requirements:
 
-- Go 10.0.0 (or newer)
+- Go 10.0.0+
 
 ### Building a binary:
 ```
@@ -37,17 +37,18 @@ go build
 
 ### Configuration and launching / stopping programs
 The programs you want to launch can be configured into the config.json file. The config.json can be requested with a GET operation to 
-an endpoint /all 
+the endpoint /all 
 ```
 wget -qO- http://localhost:8080/all
+
 {"program":[{"name":"Madplay","endpoint":"/madplay","file":"madplay","args":"/home/user/Music/song.mp3"}
 ```
 A program entity consists of four parameters: name, endpoint, file and args. 
 
-Let's say I want to launch a madplay and play some .mp3 file,  then I can configure parameters: { "name" : "Madplay", "endpoint" : 
+Let's say I want to launch madplay and play some mp3 file, then I would configure parameters: { "name" : "Madplay", "endpoint" : 
 "/madplay", "file" : "madplay", "args" "/home/user/Music/song.mp3" }. 
 
-To test this and launch madplay, we will do a GET operation to the configured endpoint i.e.
+To test this and launch madplay, we will do a GET operation to the configured endpoint /madplay
 ```
 wget -qO- http://localhost:8080/madplay &> /dev/null
 ```
