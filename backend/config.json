@@ -1,0 +1,5 @@
+{ "program" : [
+  { "name" : "Madplay", "endpoint" : "/madplay", "file" : "madplay", "args" : "/home/user/Music/song.mp3" }
+ ]
+}
+
