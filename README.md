@@ -35,20 +35,24 @@ go build
 2018/10/06/ 14:09:01 Starting Trivial Launcher backend at localhost:8080
 ```
 
-### Configuration and launching/stopping programs
+### Configuration and launching / stopping programs
 The programs you want to launch can be configured into the config.json file. The config.json can be requested with a GET operation to 
-an endpoint /all and i.e. 
+an endpoint /all 
 ```
 wget -qO- http://localhost:8080/all
 {"program":[{"name":"Madplay","endpoint":"/madplay","file":"madplay","args":"/home/user/Music/song.mp3"}
 ```
-A program entity consists of four parameter: name, endpoint, file and args. Let's say I want to launch a madplay and play some .mp3 file 
-then I can configure parameters: { "name" : "Madplay", "endpoint" : "/madplay", "file" : "madplay", "args" "/home/user/Music/song.mp3" }. 
-To test this and launch do a GET operation for the endpoint i.e.
+A program entity consists of four parameters: name, endpoint, file and args. 
+
+Let's say I want to launch a madplay and play some .mp3 file,  then I can configure parameters: { "name" : "Madplay", "endpoint" : 
+"/madplay", "file" : "madplay", "args" "/home/user/Music/song.mp3" }. 
+
+To test this and launch madplay, we will do a GET operation to the configured endpoint i.e.
 ```
 wget -qO- http://localhost:8080/madplay &> /dev/null
 ```
-For stopping an ongoing program execution we can do a GET operation to an endpoint /endCurrent i.e.
+
+For stopping an ongoing program execution, we can do a GET operation to a global endpoint /endCurrent
 ```
 wget -qO- http://localhost:8080/endCurrent &> /dev/null
 
