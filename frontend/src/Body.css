@@ -1,0 +1,15 @@
+.Body {
+    flex: 3;
+  }
+
+.Body-title {
+    margin-top: -0.75em;
+    background-color: #c833cb;
+    background-image: linear-gradient(to bottom, #d73bda, #922894);
+    color: white;
+    font-size: 0.9em;
+    font-variant: small-caps;
+    height: 1.5em;
+    padding-top: 0.5em;
+    text-shadow: 1px 1px #000000;
+}

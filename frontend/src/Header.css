@@ -1,0 +1,23 @@
+.Header {
+    background-color: #922894;
+    background-image: linear-gradient(to bottom, #511752, #922894);
+    color: white;
+    flex: 0.75;
+  }
+  
+  .Header-title {
+    margin-top: 2.0em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px #000000;
+  }
+  
+  .Header-underscore {
+    font-size: 0.7em;
+    margin-top: -0.75em;
+    font-weight: 600;
+    padding-bottom: 0.75em;
+    text-shadow: 1px 1px #000000;
+  }
+  

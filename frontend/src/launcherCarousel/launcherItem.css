@@ -1,0 +1,41 @@
+.title {
+    text-decoration: underline;
+    font-variant: small-caps;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 11px;
+    text-shadow: 1px 1px #000000;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-style: italic;
+}
+
+.moveUp {
+    font-size: 13px;
+    margin-top: -8px;
+}
+
+.items {
+    margin-top: -0.5em;
+    color: lightgray;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+}
+
+.defaultItem {
+    background-image: url('./icons/default.png');
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.noItems {
+    margin-top: 2.0em;
+    font-size: 14px;
+    background-color: black;
+}

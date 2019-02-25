@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  background-color: #222833;
+  color: white;
+  background-image: url('./background.jpeg');
+  background-position: center; 
+  height: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  justify-content: center;
+}
