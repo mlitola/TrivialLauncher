@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Body.css';
+import './resources/css/Body.css';
 import * as config from './config';
 import LauncherCarousel from './launcherCarousel/launcherCarousel';
 

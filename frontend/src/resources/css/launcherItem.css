@@ -26,7 +26,7 @@ p {
 }
 
 .defaultItem {
-    background-image: url('./icons/default.png');
+    background-image: url('../img/default_icon.png');
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.3);
     width: 100px;

@@ -3,7 +3,7 @@ import LauncherItem from './launcherItem';
 
 class LauncherCarousel extends Component {
   getItems = () => {
-    return {"apps":[{"name":"Madplay","endpoint":"/madplay","file":"madplay","args":"/home/user/Music/song.mp3"}], "media": [{"songName": "Salt", "artistName": "Catherine Wheel"}]};
+    return {"apps":[{"name":"Madplay","endpoint":"/madplay","file":"madplay","args":"/home/user/Music/song.mp3"}]};
   }
 
   createCarousel = () => {

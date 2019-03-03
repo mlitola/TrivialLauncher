@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './launcherItem.css';
+import '../resources/css/launcherItem.css';
 import * as config from '../config';
 
 class LauncherItem extends Component {

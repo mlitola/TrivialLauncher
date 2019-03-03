@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Footer.css';
+import './resources/css/Footer.css';
 import * as config from './config';
 
 
