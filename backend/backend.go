@@ -55,6 +55,10 @@ func killCommand(cmd *exec.Cmd) {
 	}
 }
 
+func enableCors(w *http.ResponseWriter) {
+	(*w).Header().Set("Access-Control-Allow-Origin", "*")
+}
+
 func main() {
 	parseConfigFile()
 
@@ -63,6 +67,7 @@ func main() {
 
 	// get all endpoint that gets the whole config json
 	http.HandleFunc("/all", func(w http.ResponseWriter, r *http.Request) {
+		enableCors(&w)
 		json.NewEncoder(w).Encode(programs)
 	})
 
@@ -74,6 +79,7 @@ func main() {
 		bufArgs := programs.Programs[i].Args
 
 		http.HandleFunc(bufEndpoint, func(w http.ResponseWriter, r *http.Request) {
+			enableCors(&w)
 			currentCommand = exec.Command(bufFile, bufArgs) // TODO: add support for more args
 			currentRunningProcess = bufName
 			log.Printf("Launching %s from an endpoint: %s\n", bufName, bufEndpoint)
@@ -83,6 +89,7 @@ func main() {
 
 	// end current command execution if one exists
 	http.HandleFunc("/endCurrent", func(w http.ResponseWriter, r *http.Request) {
+		enableCors(&w)
 		if currentCommand != nil {
 			log.Println("Ending current process: " + currentRunningProcess)
 			go killCommand(currentCommand)

@@ -3,22 +3,23 @@ import LauncherItem from './launcherItem';
 import Request from '../request/request';
 
 class LauncherCarousel extends Component {
-  getItems = () => {
-    return {"apps":[{"name":"Madplay","endpoint":"/madplay","file":"madplay","args":"/home/user/Music/song.mp3"}]};
-  }
-
   createCarousel = () => {
     let items = [];
-    let data = this.getItems();
-    console.log('trying requester...');
-    const req = new Request('GET', 'http://localhost:3000');
-    req.debug();
 
+    const req = new Request();
+
+    req.makeRequest('GET', 'http://localhost:8080/all', function(error, apps) {
+      if (error) {
+        throw error;
+      }
+      console.dir(apps);
+    });
+/*
     if (data.apps && data.apps.length > 0) {
         let apps = [];
 
         for (let i = 0; i < data.apps.length; i++) {
-            apps.push(<LauncherItem genre={'apps'} data={data.apps[i]} />);
+            apps.push(<LauncherItem genre={'program'} data={data.apps[i]} />);
         }
         items.push(<div>{apps}</div>);
     }
@@ -40,7 +41,7 @@ class LauncherCarousel extends Component {
         }
         items.push(<div>{misc}</div>);
     }
-    
+    */
     return items;
   }
 
