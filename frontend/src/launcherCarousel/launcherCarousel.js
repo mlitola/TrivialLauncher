@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LauncherItem from './launcherItem';
+import Request from '../request/request';
 
 class LauncherCarousel extends Component {
   getItems = () => {
@@ -9,6 +10,9 @@ class LauncherCarousel extends Component {
   createCarousel = () => {
     let items = [];
     let data = this.getItems();
+    console.log('trying requester...');
+    const req = new Request('GET', 'http://localhost:3000');
+    req.debug();
 
     if (data.apps && data.apps.length > 0) {
         let apps = [];
