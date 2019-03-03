@@ -1,5 +1,5 @@
 # TrivialLauncher
-A Web based program launcher consisting of Vue.js frontend and Go backend
+A Web based program launcher consisting of React frontend and Go backend
 
 ## Description
 Trivial Launcher is as the name implies a trivial software launcher. It consists of a frontend and a backend parts and it can be used as 
