@@ -14,6 +14,6 @@ export const APP_TITLE = "APPS";
 export const MISC_TITLE = "MISC";
 
 //FOOTER
-export const VERSION = "0.01";
+export const VERSION = "0.02";
 export const CREATED_BY = "mlitola";
-export const CREATED_AT = "2018";
+export const CREATED_AT = "2019";
