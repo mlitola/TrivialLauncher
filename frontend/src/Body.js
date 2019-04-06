@@ -8,7 +8,8 @@ class Body extends Component {
     return (
       <div className="Body">
         <h4 className="Body-title">{config.BODY_TITLE}</h4>
-        <div>        
+        <div>
+            <h4 className="Carousel-title">{config.APP_TITLE}</h4>
             <LauncherCarousel></LauncherCarousel>
         </div>
       </div>
