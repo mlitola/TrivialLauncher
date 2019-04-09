@@ -17,13 +17,13 @@ class LauncherCarousel extends Component {
   }
 
   render() {
-    const { data } = this.state;
+    const { data  } = this.state;
     
     return (
       <div className="items">
-        {data.program.map(prog =>
+        {data.program.map((prog, i) =>
           <div key={prog.objectID}>
-            <LauncherItem data={prog} />
+            <LauncherItem data={prog} index={i} />
           </div>
         )}
       </div>

@@ -26,6 +26,13 @@ p {
     width: 100px;
     height: 100px;
     cursor: pointer;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.playingItem {
+    display: block;
+    opacity: 0.5;
 }
 
 .noItems {
